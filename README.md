@@ -94,7 +94,7 @@ The following actions were taken;
 
 Multicollinearity analysis needs to be done on numerical columns. In this case, we will use the .corr() method and a heat map to visually inspect the data. No immediate changes were made to the data, only observations as we want to see our first model prior to making any changes. 
 
-![image.png](attachment:image.png)
+<img src = heatmap.png>
 
 Any value above .75 is considered to be highly correlated. The following observations were made; 
 * Price and 'sqft_living have the strongest correlation.
@@ -126,11 +126,13 @@ The original model was created by using OLS from statsmodel. The data was not no
  
  The original model was generated using the make_model() function:
 
-![Screen%20Shot%202020-09-14%20at%205.39.19%20PM.png](attachment:Screen%20Shot%202020-09-14%20at%205.39.19%20PM.png)
+<img src = "Screen Shot 2020-09-29 at 4.09.04 PM.png" height = 10, width = 6>
 
-![Screen%20Shot%202020-09-14%20at%205.41.46%20PM.png](attachment:Screen%20Shot%202020-09-14%20at%205.41.46%20PM.png)
+<img src ="Screen Shot 2020-09-29 at 4.09.04 PM.png">
 
-![Screen%20Shot%202020-09-14%20at%205.44.47%20PM.png](attachment:Screen%20Shot%202020-09-14%20at%205.44.47%20PM.png)
+<img src = "qq1.png">
+
+<img  src = "Screen Shot 2020-09-29 at 4.13.49 PM.png">
 
 According to the model summary, the original model yielded an R-squared of .839. The skew value of 2.383 suggests that the data distribution is highly skewed and the kurtosis value of 42.8 indicates that the data distribution has heavy tails. The QQ plot shows us visually that we do not have normally distributed residuals and the tails have extreme values. Homoscedasticity test shows hetroscedasticities and does not pass. 
 
@@ -160,11 +162,11 @@ This shows that our model is neither under fitted or over fitted.
 
 
 
-![Screen%20Shot%202020-09-16%20at%206.24.00%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%206.24.00%20PM.png)
+<img src = "Screen Shot 2020-09-29 at 4.16.09 PM.png">
 
-![Screen%20Shot%202020-09-14%20at%206.07.17%20PM.png](attachment:Screen%20Shot%202020-09-14%20at%206.07.17%20PM.png)
+<img src = "qq2.png">
 
-![Screen%20Shot%202020-09-14%20at%206.06.25%20PM.png](attachment:Screen%20Shot%202020-09-14%20at%206.06.25%20PM.png)
+<img src = "Screen Shot 2020-09-29 at 4.18.20 PM.png">
 
 ## Intrepretation
 
@@ -176,7 +178,7 @@ To analysis the data, we used the feature coefficients to interpret how a featur
 
 We created the column 'Age' by subtracting the year the house was built from the current year. The 'Age' coefficient of -.0156 translates to as a house increases in age by 1 year, the selling price decreases by -1.56 percent. We can look at this as depreciation. 
 
-![Screen%20Shot%202020-09-16%20at%203.58.34%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%203.58.34%20PM.png)
+<img src = "age.png">
 
 ### **Waterfront Housing**
 
@@ -184,31 +186,31 @@ We created the column 'Age' by subtracting the year the house was built from the
 
 Observing the graph below, we can see that if your home has a waterfront view, your house premium instantly jumps. If your house has a waterfront view, then the coefficient translates to a 61% increase of the sale price. This is one of our most significant features. 
 
-![Screen%20Shot%202020-09-16%20at%204.02.41%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%204.02.41%20PM.png)
+<img src = "gradevsprice.png">
 
 ### **Views of Your Home**
 
 If your home gets viewed, then this will increase the price of your home by almost 19%. This directly relates to marketing. If you show professional photos and videos of your home along with having an experience agent then consumers are more likely to view your home. The more consumers you attract, the more bids you will receive. 
 
-![Screen%20Shot%202020-09-16%20at%204.05.53%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%204.05.53%20PM.png)
+<img src = "views.png">
 
 ### **King County Grading**
 
 The grading system for King County goes from 3-13 where 13 is the highest grade in the data. A house that receives a grade 11-13 could potentially see a 41-80% increase in sale price. As the grades decrease so does the potential. A house receiving a grade between 4-6 could possibly see a decrease in sale price ranging from 42-14 percent. The grades are based on the quality of materials and workmanship the house holds. 
 
-![Screen%20Shot%202020-09-16%20at%204.07.57%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%204.07.57%20PM.png)
+<img src = "grades.png">
 
 ### Basement Coefficient 
 
 The 'sqft_basement_1' coefficient of .0728 translates to increasing sale price by over 7%. If you have a basement, then showcase it. Potential house buyers will love to know they have extra space to work with. 
 
-![Screen%20Shot%202020-09-16%20at%204.12.27%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%204.12.27%20PM.png)
+<img src = "basement.png">
 
 ### Renovations 
 
 Analyzing the 'yr_renovated_1' coefficient which is equal to .1143, shows that if you renovate your home it will increase the sale price by almost 12%. This goes hand in hand with the grading system. Renovate your home with high quality materials and quality workmanship and you will achieve a higher grade.  
 
-![Screen%20Shot%202020-09-16%20at%204.13.55%20PM.png](attachment:Screen%20Shot%202020-09-16%20at%204.13.55%20PM.png)
+<img src = "renovations .png">
 
 
 ## Conclusion
